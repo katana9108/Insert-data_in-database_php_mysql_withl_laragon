@@ -4,10 +4,7 @@ $dbuser= 'root';
 $dbpassword='root';
 $dbname='test';
 $conn = mysqli_connect($dbhost,$dbpassword,$dbuser,$dbname);
-
 if(!$conn){
-    printf('Connection Impossible:', mysqli_connect_error());
-    exit();
+    die("Connection impossible:".mysqli_connect_error($conn));
 }
-echo " Connection réussit avec succèes!";
-?>
+echo " Connection réussit avec succès!";
